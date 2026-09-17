@@ -14,6 +14,10 @@ Turn full lyrics, a rough draft, or a hook into a structured song with clear sec
 | **Cost** | Free to install. Each render uses credits on your Beatra account, and paid steps run only when you ask for that exact render or approve its card. |
 | **Works with** | Claude Code, Codex, OpenClaw |
 
+<p align="center"><img src="assets/cover.webp" width="800" alt="Cover art for &quot;Taking the Light With Me&quot;, a folk song about moving out of an old apartment, showing one taped box in an empty sunlit room. AI-generated with Beatra."></p>
+
+*Cover art for "Taking the Light With Me", a folk song about moving out of an old apartment, showing one taped box in an empty sunlit room. AI-generated with Beatra.*
+
 | Skill | Entry point | Version |
 | --- | --- | --- |
 | [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.0 |
@@ -41,6 +45,20 @@ Or paste this into your agent:
 
 ```text
 Install the suno-lyrics-to-song skill from https://github.com/beatra-ai/lyrics-to-song-skill (folder skills/suno-lyrics-to-song), then follow its SKILL.md to connect my Beatra account.
+```
+
+## Examples
+
+<p align="center"><img src="assets/cover.webp" width="800" alt="Cover art for &quot;Taking the Light With Me&quot;, a folk song about moving out of an old apartment, showing one taped box in an empty sunlit room. AI-generated with Beatra."></p>
+
+[▶ Listen (MP3)](assets/sample.mp3)
+
+*First 60 seconds of "Taking the Light With Me", an acoustic folk song with a male lead, made by structuring a rough lyric draft into verse, pre-chorus, chorus and bridge. AI-generated with Beatra.*
+
+Prompt:
+
+```text
+Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
 
 ## What you get

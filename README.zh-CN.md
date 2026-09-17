@@ -14,6 +14,10 @@
 | **费用** | 安装免费。每次生成消耗 Beatra 账号积分，只有你明确要求这次生成或批准确认卡后才会付费。 |
 | **支持的 Agent** | Claude Code、Codex、OpenClaw |
 
+<p align="center"><img src="assets/cover.webp" width="800" alt="歌曲《Taking the Light With Me》的封面：阳光洒进搬空的房间，地板上放着一只封好的纸箱。由 Beatra AI 生成。"></p>
+
+*歌曲《Taking the Light With Me》的封面：阳光洒进搬空的房间，地板上放着一只封好的纸箱。由 Beatra AI 生成。*
+
 | Skill | Entry point | Version |
 | --- | --- | --- |
 | [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.0 |
@@ -40,6 +44,20 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 
 ```text
 从 https://github.com/beatra-ai/lyrics-to-song-skill 安装 suno-lyrics-to-song skill（目录 skills/suno-lyrics-to-song），然后按它的 SKILL.md 连接我的 Beatra 账号。
+```
+
+## 效果示例
+
+<p align="center"><img src="assets/cover.webp" width="800" alt="歌曲《Taking the Light With Me》的封面：阳光洒进搬空的房间，地板上放着一只封好的纸箱。由 Beatra AI 生成。"></p>
+
+[▶ 试听（MP3）](assets/sample.mp3)
+
+*原声民谣《Taking the Light With Me》前 60 秒，男声主唱，由一份零散歌词草稿整理成主歌、导歌、副歌和桥段后生成。由 Beatra AI 生成。*
+
+提示词：
+
+```text
+Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
 
 ## 你能得到什么
