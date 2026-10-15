@@ -20,7 +20,7 @@ Turn full lyrics, a rough draft, or a hook into a structured song with clear sec
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.3 |
+| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.6 |
 
 This repository is published automatically from [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song). Report issues there.
 
@@ -92,12 +92,12 @@ Set the language, delivery, vocal character, song structure, and duration direct
 
 A lyric or direction change creates a new version and may also change the vocal performance and arrangement, so review the complete updated words and direction before creating it.
 
-## Updates
+## Updates and security
 
-Each installed skill checks for a new version at most once a day, verifies the
-official archive before replacing itself, and leaves your installation untouched
-if anything fails. Turn it off at any time — see
-`references/automatic-updates-and-safety.md` inside the skill.
+Since the 2026-10 release, this skill contains no self-updater: it runs only the
+files you installed and never replaces them on its own. Update it with the tool
+you installed it with — `npx skills update suno-lyrics-to-song` or `gh skill update suno-lyrics-to-song`.
+Details: `references/updates-and-security.md` inside the skill.
 
 ## License
 
