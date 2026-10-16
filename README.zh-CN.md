@@ -20,7 +20,7 @@
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.6 |
+| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.7 |
 
 本仓库由 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song) 自动发布，问题请到那里反馈。
 
@@ -59,6 +59,27 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 ```text
 Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
+
+## 规格
+
+截至 2026-10-16。实时列表：https://docs.beatra.ai/zh/docs/models
+
+- **文生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；歌词最多 5000 字符
+- **参考音频生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；歌词最多 5000 字符
+
+## 与同类方案对比
+
+| | Beatra（本 skill） | [regiellis/suno-songwriter-agent-skill](https://github.com/regiellis/suno-songwriter-agent-skill) | [scenario-labs/skills](https://github.com/scenario-labs/skills) |
+| --- | --- | --- | --- |
+| 需要的账号或 key | 一个 Beatra 账号，不需要各家模型的 key | 未列出需要的账号或 key；它写出供 Suno v6 简单或高级模式使用的歌曲包（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L6-L17)） | Scenario 账号（OAuth 登录）或 Scenario API key（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L105)） |
+| 模型 | 文生音乐 2；参考音频生音乐 2 | 面向 Suno v6、v6-wild 和 v6-mini 编写（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L26)） | 按带标签的歌词单生成人声歌曲（MiniMax 音乐），另有 ACE-Step 和 ElevenLabs 音乐（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L285-L287)） |
+| 花钱前 | 只有你明确要求这次生成，或批准显示实时积分估算的确认卡后才会付费 | 未说明 | 质量检查和模型对比两个 skill 可先 dry-run 试算价格（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L208-L210)） |
+| 支持的 Agent | Claude Code、Codex、OpenClaw | 任何能读取 SKILL.md 的 Agent，包括 Claude Desktop 和 Codex Desktop（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L8-L133)） | Claude Code、Cursor、Codex、Copilot 及另外 70 多种编程 Agent（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L30)） |
+| 安装 | `npx skills add beatra-ai/lyrics-to-song-skill` | 从它的文档站下载 skill ZIP（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L116)） | `npx skills add scenario-labs/skills`，再连接 Scenario MCP 服务器（https://mcp.scenario.com/mcp）（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L89-L105)） |
+| 许可证 | MIT-0 | MIT（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/LICENSE)） | MIT（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/LICENSE)） |
+| 最近更新 | 随每次发布更新（v0.2.7） | 2026-10-11（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/commit/cc3053bd027f822476734f41edbf9ae98078f61a)） | 2026-10-15（[出处](https://github.com/scenario-labs/skills/commit/49dd26e47371163ae0020c7f5627d0993626bfc2)） |
+
+事实核对于 2026-10-16。有误请到 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/issues) 提 issue。
 
 ## 你能得到什么
 
@@ -100,3 +121,13 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 ## 许可证
 
 [MIT-0](LICENSE)：可自由使用、修改和再分发，包括商用，无需署名；与这些 skill 在 ClawHub 上的条款一致。
+
+## 相关链接
+
+- 官网 — https://www.beatra.cn
+- 文档 — https://docs.beatra.cn
+- 控制台 — https://console.beatra.cn
+
+- 微信小程序 — 国内用户微信扫码使用
+
+<img src="assets/beatra-mini-program-qr.jpg" alt="Beatra 微信小程序码" width="160">
