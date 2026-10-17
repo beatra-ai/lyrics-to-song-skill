@@ -60,12 +60,17 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
 
-## 规格
+## 技术规格与输出限制
 
 截至 2026-10-16。实时列表：https://docs.beatra.ai/zh/docs/models
 
-- **文生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；歌词最多 5000 字符
-- **参考音频生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；歌词最多 5000 字符
+- **上传** — 单个文件最大 100 MB；同时适用下方各模型的输入限制
+- **文生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；MP3
+  - Suno 6：提示词最多 500、歌词最多 5000、标题最多 80 字符
+  - MiniMax Music 3.0：提示词最多 2000、歌词最多 3500、标题最多 100 字符
+- **参考音频生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；MP3
+  - Suno 6：提示词最多 500、歌词最多 5000、标题最多 80 字符；参考音频 6–480 秒（FLAC、MP3、WAV）
+  - MiniMax Music 3.0：提示词最多 300、歌词最多 1000、标题最多 100 字符；参考音频 6–360 秒，最大 50 MB（FLAC、MP3、WAV）
 
 ## 为什么用 Beatra，而不是直接调用模型 API
 

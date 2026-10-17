@@ -61,12 +61,17 @@ Prompt:
 Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
 
-## Specs
+## Technical Specifications & Output Limits
 
 As of 2026-10-16. Live list: https://docs.beatra.ai/en/docs/models
 
-- **Text to music** — 2 models (Suno 6, MiniMax Music 3.0); lyrics up to 5000 characters
-- **Reference audio to music** — 2 models (Suno 6, MiniMax Music 3.0); lyrics up to 5000 characters
+- **Uploads** — up to 100 MB per file; the per-model input limits below also apply
+- **Text to music** — 2 models (Suno 6, MiniMax Music 3.0); MP3
+  - Suno 6: prompt up to 500, lyrics up to 5000, title up to 80 characters
+  - MiniMax Music 3.0: prompt up to 2000, lyrics up to 3500, title up to 100 characters
+- **Reference audio to music** — 2 models (Suno 6, MiniMax Music 3.0); MP3
+  - Suno 6: prompt up to 500, lyrics up to 5000, title up to 80 characters; reference audio 6–480 s (FLAC, MP3, WAV)
+  - MiniMax Music 3.0: prompt up to 300, lyrics up to 1000, title up to 100 characters; reference audio 6–360 s, up to 50 MB (FLAC, MP3, WAV)
 
 ## Why use Beatra instead of calling model APIs directly
 
