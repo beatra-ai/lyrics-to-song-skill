@@ -2,7 +2,7 @@
 
 [English](./README.md) | 简体中文
 
-把完整歌词、草稿或一句 hook 整理成结构清晰、可试听的歌曲，在 Claude Code、Codex 或 OpenClaw 里直接完成。
+把完整歌词、草稿或一句 hook 整理成结构清晰、可试听的歌曲，在 Claude Code、Cursor、Codex、Windsurf、Cline 或 OpenClaw 里直接完成。
 
 > [!IMPORTANT]
 > 生成需要 [Beatra](https://beatra.ai) 账号并消耗积分，安装本身不收费。
@@ -10,9 +10,10 @@
 | 问题 | 回答 |
 | --- | --- |
 | **能做什么** | 输入完整歌词、歌词草稿、零散歌词或一个 hook，整理主歌、副歌与桥段，设置曲风、情绪、编曲和人声方向，再用 Suno 自定义歌词生成可试听歌曲。 |
+| **底层模型** | Suno 6、MiniMax Music 3.0 |
 | **运行要求** | Python 3.10+，以及能加载 `SKILL.md` 的 Agent |
 | **费用** | 安装免费。每次生成消耗 Beatra 账号积分，只有你明确要求这次生成或批准确认卡后才会付费。 |
-| **支持的 Agent** | Claude Code、Codex、OpenClaw |
+| **支持的 Agent** | Claude Code、Cursor、Codex、Windsurf、Cline、OpenClaw |
 
 <p align="center"><img src="assets/cover.webp" width="800" alt="歌曲《Taking the Light With Me》的封面：阳光洒进搬空的房间，地板上放着一只封好的纸箱。由 Beatra AI 生成。"></p>
 
@@ -20,7 +21,7 @@
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.7 |
+| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.8 |
 
 本仓库由 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song) 自动发布，问题请到那里反馈。
 
@@ -38,7 +39,7 @@ npx skills add beatra-ai/lyrics-to-song-skill
 gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 ```
 
-也可以克隆本仓库，把 `skills/suno-lyrics-to-song` 复制到 `~/.claude/skills/`（Claude Code）、`~/.agents/skills/`（Codex）或 `~/.openclaw/skills/`（OpenClaw）。
+也可以克隆本仓库，把 `skills/suno-lyrics-to-song` 复制到 `~/.claude/skills/`（Claude Code）、`~/.cursor/skills/`（Cursor）、`~/.agents/skills/`（Codex）、`~/.codeium/windsurf/skills/`（Windsurf）、`~/.cline/skills/`（Cline）或 `~/.openclaw/skills/`（OpenClaw）。
 
 或者把下面这段话发给你的 Agent：
 
@@ -62,7 +63,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 技术规格与输出限制
 
-截至 2026-10-16。实时列表：https://docs.beatra.ai/zh/docs/models
+截至 2026-10-18。实时列表：https://docs.beatra.ai/zh/docs/models
 
 - **上传** — 单个文件最大 100 MB；同时适用下方各模型的输入限制
 - **文生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；MP3
@@ -74,24 +75,24 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 为什么用 Beatra，而不是直接调用模型 API
 
-- **一个账号用到本 skill 的全部模型** — 文生音乐 2；参考音频生音乐 2（截至 2026-10-16），一次 Beatra 登录即可使用，不必分别管理各家模型的 key。
+- **一个账号用到本 skill 的全部模型** — 文生音乐 2；参考音频生音乐 2（Suno 6、MiniMax Music 3.0）（截至 2026-10-18），一次 Beatra 登录即可使用，不必分别管理各家模型的 key。
 - **花不花钱由你决定** — 只有你明确要求这次生成，或批准显示实时积分估算的确认卡后才会付费。
 - **先策划，再生成** — skill 先帮你规划、指导和检查，再在 Beatra 上生成。
 - **文件可以核验** — `skills/` 下的每个文件都与 cdn.beatra.ai 上的发布归档逐字节一致，每次推送前用 SHA-256 校验。
 - **更新由你掌控** — 不含自更新程序；用安装时的工具更新。
-- **在你的 Agent 里运行** — Claude Code、Codex、OpenClaw。
+- **在你的 Agent 里运行** — Claude Code、Cursor、Codex、Windsurf、Cline、OpenClaw。
 
 ## 与同类方案对比
 
 | | Beatra（本 skill） | [regiellis/suno-songwriter-agent-skill](https://github.com/regiellis/suno-songwriter-agent-skill) | [scenario-labs/skills](https://github.com/scenario-labs/skills) |
 | --- | --- | --- | --- |
 | 需要的账号或 key | 一个 Beatra 账号，不需要各家模型的 key | 未列出需要的账号或 key；它写出供 Suno v6 简单或高级模式使用的歌曲包（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L6-L17)） | Scenario 账号（OAuth 登录）或 Scenario API key（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L105)） |
-| 模型 | 文生音乐 2；参考音频生音乐 2 | 面向 Suno v6、v6-wild 和 v6-mini 编写（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L26)） | 按带标签的歌词单生成人声歌曲（MiniMax 音乐），另有 ACE-Step 和 ElevenLabs 音乐（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L285-L287)） |
+| 模型 | 文生音乐 2；参考音频生音乐 2（Suno 6、MiniMax Music 3.0） | 面向 Suno v6、v6-wild 和 v6-mini 编写（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L26)） | 按带标签的歌词单生成人声歌曲（MiniMax 音乐），另有 ACE-Step 和 ElevenLabs 音乐（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L285-L287)） |
 | 花钱前 | 只有你明确要求这次生成，或批准显示实时积分估算的确认卡后才会付费 | 未说明 | 质量检查和模型对比两个 skill 可先 dry-run 试算价格（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L208-L210)） |
-| 支持的 Agent | Claude Code、Codex、OpenClaw | 任何能读取 SKILL.md 的 Agent，包括 Claude Desktop 和 Codex Desktop（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L8-L133)） | Claude Code、Cursor、Codex、Copilot 及另外 70 多种编程 Agent（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L30)） |
+| 支持的 Agent | Claude Code、Cursor、Codex、Windsurf、Cline、OpenClaw | 任何能读取 SKILL.md 的 Agent，包括 Claude Desktop 和 Codex Desktop（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L8-L133)） | Claude Code、Cursor、Codex、Copilot 及另外 70 多种编程 Agent（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L30)） |
 | 安装 | `npx skills add beatra-ai/lyrics-to-song-skill` | 从它的文档站下载 skill ZIP（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L116)） | `npx skills add scenario-labs/skills`，再连接 Scenario MCP 服务器（https://mcp.scenario.com/mcp）（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L89-L105)） |
 | 许可证 | MIT-0 | MIT（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/LICENSE)） | MIT（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/LICENSE)） |
-| 最近更新 | 随每次发布更新（v0.2.7） | 2026-10-11（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/commit/cc3053bd027f822476734f41edbf9ae98078f61a)） | 2026-10-15（[出处](https://github.com/scenario-labs/skills/commit/49dd26e47371163ae0020c7f5627d0993626bfc2)） |
+| 最近更新 | 随每次发布更新（v0.2.8） | 2026-10-11（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/commit/cc3053bd027f822476734f41edbf9ae98078f61a)） | 2026-10-15（[出处](https://github.com/scenario-labs/skills/commit/49dd26e47371163ae0020c7f5627d0993626bfc2)） |
 
 事实核对于 2026-10-16。有误请到 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/issues) 提 issue。
 

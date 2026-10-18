@@ -2,7 +2,7 @@
 
 English | [简体中文](./README.zh-CN.md)
 
-Turn full lyrics, a rough draft, or a hook into a structured song with clear sections, style, and vocal direction, from inside Claude Code, Codex, or OpenClaw.
+Turn full lyrics, a rough draft, or a hook into a structured song with clear sections, style, and vocal direction, from inside Claude Code, Cursor, Codex, Windsurf, Cline, or OpenClaw.
 
 > [!IMPORTANT]
 > Rendering needs a [Beatra](https://beatra.ai) account and uses credits. The skill itself is free to install.
@@ -10,9 +10,10 @@ Turn full lyrics, a rough draft, or a hook into a structured song with clear sec
 | Question | Answer |
 | --- | --- |
 | **What it does** | Turn complete lyrics, rough drafts, loose lines, or a hook into a structured Suno song with custom lyrics, clear sections, style, mood, arrangement, and vocal direction. |
+| **Models** | Suno 6, MiniMax Music 3.0 |
 | **Requirements** | Python 3.10+ and an agent that loads `SKILL.md` |
 | **Cost** | Free to install. Each render uses credits on your Beatra account, and paid steps run only when you ask for that exact render or approve its card. |
-| **Works with** | Claude Code, Codex, OpenClaw |
+| **Works with** | Claude Code, Cursor, Codex, Windsurf, Cline, OpenClaw |
 
 <p align="center"><img src="assets/cover.webp" width="800" alt="Cover art for &quot;Taking the Light With Me&quot;, a folk song about moving out of an old apartment, showing one taped box in an empty sunlit room. AI-generated with Beatra."></p>
 
@@ -20,7 +21,7 @@ Turn full lyrics, a rough draft, or a hook into a structured song with clear sec
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.7 |
+| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.8 |
 
 This repository is published automatically from [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song). Report issues there.
 
@@ -39,7 +40,8 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 ```
 
 Or clone this repository and copy `skills/suno-lyrics-to-song` into `~/.claude/skills/` for Claude Code,
-`~/.agents/skills/` for Codex, or `~/.openclaw/skills/` for OpenClaw.
+`~/.cursor/skills/` for Cursor, `~/.agents/skills/` for Codex, `~/.codeium/windsurf/skills/` for Windsurf,
+`~/.cline/skills/` for Cline, or `~/.openclaw/skills/` for OpenClaw.
 
 Or paste this into your agent:
 
@@ -63,7 +65,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## Technical Specifications & Output Limits
 
-As of 2026-10-16. Live list: https://docs.beatra.ai/en/docs/models
+As of 2026-10-18. Live list: https://docs.beatra.ai/en/docs/models
 
 - **Uploads** — up to 100 MB per file; the per-model input limits below also apply
 - **Text to music** — 2 models (Suno 6, MiniMax Music 3.0); MP3
@@ -75,24 +77,24 @@ As of 2026-10-16. Live list: https://docs.beatra.ai/en/docs/models
 
 ## Why use Beatra instead of calling model APIs directly
 
-- **One account for every model this skill uses** — Text to music 2; Reference audio to music 2 (as of 2026-10-16), behind one Beatra sign-in; no keys from individual model providers to manage.
+- **One account for every model this skill uses** — Text to music 2; Reference audio to music 2 (Suno 6, MiniMax Music 3.0) (as of 2026-10-18), behind one Beatra sign-in; no keys from individual model providers to manage.
 - **You decide what gets paid for** — Paid renders run only when you ask for that exact render or approve its card, which shows the live credit estimate.
 - **Direction before rendering** — the skill plans, directs, and reviews the work, then renders it on Beatra.
 - **Files you can verify** — every file under `skills/` matches the release archive on cdn.beatra.ai byte for byte, checked by SHA-256 before each push.
 - **Updates you control** — no self-updater; update with the tool you installed it with.
-- **Runs in your agent** — Claude Code, Codex, OpenClaw.
+- **Runs in your agent** — Claude Code, Cursor, Codex, Windsurf, Cline, OpenClaw.
 
 ## How it compares
 
 | | Beatra (this skill) | [regiellis/suno-songwriter-agent-skill](https://github.com/regiellis/suno-songwriter-agent-skill) | [scenario-labs/skills](https://github.com/scenario-labs/skills) |
 | --- | --- | --- | --- |
 | Account or key needed | A Beatra account; no model provider keys | Lists no account or key; it writes song packages for Suno v6 Simple or Advanced mode ([source](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L6-L17)) | A Scenario account (OAuth) or a Scenario API key ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L105)) |
-| Models | Text to music 2; Reference audio to music 2 | Writes for Suno v6, v6-wild and v6-mini ([source](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L26)) | Vocal songs from a tagged lyric sheet (MiniMax music), plus ACE-Step and ElevenLabs music ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L285-L287)) |
+| Models | Text to music 2; Reference audio to music 2 (Suno 6, MiniMax Music 3.0) | Writes for Suno v6, v6-wild and v6-mini ([source](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L26)) | Vocal songs from a tagged lyric sheet (MiniMax music), plus ACE-Step and ElevenLabs music ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L285-L287)) |
 | Before spending | Paid renders run only when you ask for that exact render or approve its card, which shows the live credit estimate | Not stated | Dry-run price estimates in its quality-gate and model-comparison skills ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L208-L210)) |
-| Agents | Claude Code, Codex, OpenClaw | Any harness that reads SKILL.md, including Claude Desktop and Codex Desktop ([source](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L8-L133)) | Claude Code, Cursor, Codex, Copilot and 70+ others ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L30)) |
+| Agents | Claude Code, Cursor, Codex, Windsurf, Cline, OpenClaw | Any harness that reads SKILL.md, including Claude Desktop and Codex Desktop ([source](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L8-L133)) | Claude Code, Cursor, Codex, Copilot and 70+ others ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L30)) |
 | Install | `npx skills add beatra-ai/lyrics-to-song-skill` | Download the skill ZIP from its documentation site ([source](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L116)) | `npx skills add scenario-labs/skills`, then connect the Scenario MCP server (https://mcp.scenario.com/mcp) ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L89-L105)) |
 | License | MIT-0 | MIT ([source](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/LICENSE)) | MIT ([source](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/LICENSE)) |
-| Last updated | Updated with every release (v0.2.7) | 2026-10-11 ([source](https://github.com/regiellis/suno-songwriter-agent-skill/commit/cc3053bd027f822476734f41edbf9ae98078f61a)) | 2026-10-15 ([source](https://github.com/scenario-labs/skills/commit/49dd26e47371163ae0020c7f5627d0993626bfc2)) |
+| Last updated | Updated with every release (v0.2.8) | 2026-10-11 ([source](https://github.com/regiellis/suno-songwriter-agent-skill/commit/cc3053bd027f822476734f41edbf9ae98078f61a)) | 2026-10-15 ([source](https://github.com/scenario-labs/skills/commit/49dd26e47371163ae0020c7f5627d0993626bfc2)) |
 
 Facts checked on 2026-10-16. Corrections: open an issue in [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/issues).
 
