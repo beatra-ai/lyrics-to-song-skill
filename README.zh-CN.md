@@ -7,7 +7,7 @@
 把完整歌词、草稿或一句 hook 整理成结构清晰、可试听的歌曲，在 Claude Code、Cursor、Codex、Windsurf、Cline 或 OpenClaw 里直接完成。
 
 > [!IMPORTANT]
-> 生成需要 [Beatra](https://beatra.ai) 账号并消耗积分，安装本身不收费。
+> 生成需要 [Beatra](https://beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill) 账号并消耗积分，安装本身不收费。
 
 | 问题 | 回答 |
 | --- | --- |
@@ -23,7 +23,7 @@
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.8 |
+| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.9 |
 
 本仓库由 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song) 自动发布，问题请到那里反馈。
 
@@ -100,7 +100,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 | 支持的 Agent | Claude Code、Cursor、Codex、Windsurf、Cline、OpenClaw | 任何能读取 SKILL.md 的 Agent，包括 Claude Desktop 和 Codex Desktop（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L8-L133)） | Claude Code、Cursor、Codex、Copilot 及另外 70 多种编程 Agent（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L30)） |
 | 安装 | `npx skills add beatra-ai/lyrics-to-song-skill` | 从它的文档站下载 skill ZIP（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/README.md#L116)） | `npx skills add scenario-labs/skills`，再连接 Scenario MCP 服务器（https://mcp.scenario.com/mcp）（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/README.md#L89-L105)） |
 | 许可证 | MIT-0 | MIT（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/blob/cc3053bd027f822476734f41edbf9ae98078f61a/LICENSE)） | MIT（[出处](https://github.com/scenario-labs/skills/blob/49dd26e47371163ae0020c7f5627d0993626bfc2/LICENSE)） |
-| 最近更新 | 随每次发布更新（v0.2.8） | 2026-10-11（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/commit/cc3053bd027f822476734f41edbf9ae98078f61a)） | 2026-10-15（[出处](https://github.com/scenario-labs/skills/commit/49dd26e47371163ae0020c7f5627d0993626bfc2)） |
+| 最近更新 | 随每次发布更新（v0.2.9） | 2026-10-11（[出处](https://github.com/regiellis/suno-songwriter-agent-skill/commit/cc3053bd027f822476734f41edbf9ae98078f61a)） | 2026-10-15（[出处](https://github.com/scenario-labs/skills/commit/49dd26e47371163ae0020c7f5627d0993626bfc2)） |
 
 事实核对于 2026-10-16。有误请到 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/issues) 提 issue。
 
@@ -147,8 +147,8 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 相关链接
 
-- 官网 — https://www.beatra.cn
-- 文档 — https://docs.beatra.cn
+- 官网 — https://www.beatra.cn?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
+- 文档 — https://docs.beatra.cn?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - 控制台 — https://console.beatra.cn
 - 给 AI Agent 读的说明 — https://www.beatra.cn/llms.txt（索引）· https://www.beatra.cn/llms-full.txt（全部 skill 合成一个文件）
 

@@ -7,7 +7,7 @@
 完成した歌詞、下書き、フックを、構成・スタイル・ボーカルの方向が定まった 1 曲に。Claude Code、Cursor、Codex、Windsurf、Cline、OpenClaw のどれからでもそのまま使えます。
 
 > [!IMPORTANT]
-> 生成には [Beatra](https://beatra.ai) アカウントが必要で、クレジットを消費します。スキル自体のインストールは無料です。
+> 生成には [Beatra](https://beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill) アカウントが必要で、クレジットを消費します。スキル自体のインストールは無料です。
 
 | 項目 | 内容 |
 | --- | --- |
@@ -23,7 +23,7 @@
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.8 |
+| [`suno-lyrics-to-song`](skills/suno-lyrics-to-song) | [SKILL.md](skills/suno-lyrics-to-song/SKILL.md) | 0.2.9 |
 
 このリポジトリは [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song) から自動的に公開されています。問題の報告はそちらへお願いします。
 
@@ -124,7 +124,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## リンク
 
-- ウェブサイト — https://beatra.ai
-- ドキュメント — https://docs.beatra.ai
+- ウェブサイト — https://beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
+- ドキュメント — https://docs.beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - コンソール — https://console.beatra.ai
 - AI エージェント向け — https://beatra.ai/llms.txt（インデックス）· https://beatra.ai/llms-full.txt（全スキルを 1 ファイルに）
