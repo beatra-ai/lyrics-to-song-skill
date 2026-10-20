@@ -1,6 +1,8 @@
 # Lyrics to Song Skill
 
-[English](./README.md) | 简体中文
+[English](./README.md) | 简体中文 | [日本語](./README.ja.md)
+
+> 👉 也看看 [AI Music Generator Skill](https://github.com/beatra-ai/ai-music-generator-skill)
 
 把完整歌词、草稿或一句 hook 整理成结构清晰、可试听的歌曲，在 Claude Code、Cursor、Codex、Windsurf、Cline 或 OpenClaw 里直接完成。
 
@@ -54,6 +56,12 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 [▶ 试听（MP3）](assets/sample.mp3)
 
 *原声民谣《Taking the Light With Me》前 60 秒，男声主唱，由一份零散歌词草稿整理成主歌、导歌、副歌和桥段后生成。由 Beatra AI 生成。*
+
+在你的 Agent 里这样说：
+
+```text
+这是我写的一段粗糙歌词，讲搬家那天收拾旧公寓（在 ./lyrics.txt 里）。帮我整理成主歌、预副歌、副歌和桥段，做成一首温暖的男声原声民谣。
+```
 
 提示词：
 

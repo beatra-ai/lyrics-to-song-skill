@@ -1,6 +1,8 @@
 # Lyrics to Song Skill
 
-English | [简体中文](./README.zh-CN.md)
+English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md)
+
+> 👉 See also [AI Music Generator Skill](https://github.com/beatra-ai/ai-music-generator-skill)
 
 Turn full lyrics, a rough draft, or a hook into a structured song with clear sections, style, and vocal direction, from inside Claude Code, Cursor, Codex, Windsurf, Cline, or OpenClaw.
 
@@ -56,6 +58,12 @@ Install the suno-lyrics-to-song skill from https://github.com/beatra-ai/lyrics-t
 [▶ Listen (MP3)](assets/sample.mp3)
 
 *First 60 seconds of "Taking the Light With Me", an acoustic folk song with a male lead, made by structuring a rough lyric draft into verse, pre-chorus, chorus and bridge. AI-generated with Beatra.*
+
+Ask your agent:
+
+```text
+Here is my rough lyric draft about packing up an old apartment on moving day (in ./lyrics.txt). Structure it into verses, a pre-chorus, chorus and bridge, then make it a warm acoustic folk song with a male lead.
+```
 
 Prompt:
 
