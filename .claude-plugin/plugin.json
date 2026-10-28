@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "suno-lyrics-to-song",
+  "displayName": "Lyrics to Song",
+  "version": "0.3.1",
+  "description": "Turn complete lyrics, rough drafts, loose lines, or a hook into a structured Suno song with custom lyrics, clear sections, style, mood, arrangement, and vocal direction.",
+  "author": {
+    "name": "Beatra AI",
+    "url": "https://github.com/beatra-ai"
+  },
+  "homepage": "https://beatra.ai/skills/suno-lyrics-to-song",
+  "repository": "https://github.com/beatra-ai/lyrics-to-song-skill",
+  "license": "MIT-0",
+  "icon": "./assets/icon.png"
+}

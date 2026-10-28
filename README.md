@@ -35,6 +35,33 @@ With the [`skills`](https://skills.sh) CLI:
 npx skills add beatra-ai/lyrics-to-song-skill
 ```
 
+As a Claude Code plugin:
+
+```bash
+claude plugin marketplace add beatra-ai/lyrics-to-song-skill
+claude plugin install suno-lyrics-to-song@lyrics-to-song-skill
+```
+
+As a Codex plugin:
+
+```bash
+codex plugin marketplace add beatra-ai/lyrics-to-song-skill
+codex plugin add suno-lyrics-to-song@lyrics-to-song-skill
+```
+
+As a GitHub Copilot CLI plugin:
+
+```bash
+copilot plugin marketplace add beatra-ai/lyrics-to-song-skill
+copilot plugin install suno-lyrics-to-song@lyrics-to-song-skill
+```
+
+As a Gemini CLI extension:
+
+```bash
+gemini extensions install https://github.com/beatra-ai/lyrics-to-song-skill
+```
+
 With the GitHub CLI:
 
 ```bash
