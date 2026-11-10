@@ -62,6 +62,12 @@ copilot plugin install suno-lyrics-to-song@lyrics-to-song-skill
 gemini extensions install https://github.com/beatra-ai/lyrics-to-song-skill
 ```
 
+作为 Antigravity CLI 插件：
+
+```bash
+agy plugin install https://github.com/beatra-ai/lyrics-to-song-skill
+```
+
 使用 GitHub CLI：
 
 ```bash
@@ -95,6 +101,14 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 ```text
 Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
+
+## 输入与输出
+
+| | 类型 | 格式 | 规格 |
+| --- | --- | --- | --- |
+| **输入** | 文本：完整歌词、歌词草稿、零散歌词行或一句 hook | — | — |
+| **输出** | 文本：标好主歌、副歌和桥段的歌词，附风格提示词 | — | 可编辑 |
+| **输出** | 音频：用你的歌词做成的可试听歌曲 | MP3 | — |
 
 ## 技术规格与输出限制
 
@@ -150,17 +164,17 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 可以从完整歌词、零散草稿、几句歌词或已有 hook 开始。开始时至少需要一句已有歌词或一个已有 hook。
 
-### 能完全保留我的原词吗？
+### 保留模式会怎么处理我的歌词？
 
-可以。保留模式会让歌词正文中的每个字符、标点、完整歌词行及其先后顺序保持不变，只允许调整完整行周围的换行或空行，并在正文之外增加段落标签。
+按你写的歌词正文排歌词表，每个字、每个标点、每一行和先后顺序都照原文；只调整整行前后的换行或空行，段落标签加在正文之外。
 
-### 如何控制发音、人声方向和歌曲时长？
+### 能控制发音、人声和时长吗？
 
-在音乐方向中明确语言、演唱方式、人声特征、歌曲结构和时长倾向，生成后试听完整表现，再把最重要的一处调整放进下一个版本。
+能。在要求里写明语言、演唱方式、人声特点、歌曲结构和大致时长，歌曲就按这些来做。
 
-### 试听后修改歌词会怎样？
+### 最后拿到什么？
 
-修改歌词或音乐方向会生成一个新版本，也可能改变演唱和编曲，因此需要先检查更新后的完整歌词与方向。
+一份标好主歌、副歌和桥段的歌词，附风格提示词，以及一首用你的歌词做成、可以试听的 MP3 歌曲。
 
 ## 更新与安全
 
@@ -170,7 +184,9 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 许可证
 
-[MIT-0](LICENSE)：可自由使用、修改和再分发，包括商用，无需署名；与这些 skill 在 ClawHub 上的条款一致。
+本仓库的 Skill 文件（`SKILL.md`、参考文档和脚本）与本 README 采用 [MIT-0](LICENSE) 许可：可自由使用、修改和再分发，包括商用，无需署名。
+
+内容生成在 Beatra 云端完成，适用 [Beatra 服务条款](https://www.beatra.cn/terms?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill)。
 
 ## 相关链接
 

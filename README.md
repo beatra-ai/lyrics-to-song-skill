@@ -62,6 +62,12 @@ As a Gemini CLI extension:
 gemini extensions install https://github.com/beatra-ai/lyrics-to-song-skill
 ```
 
+As an Antigravity CLI plugin:
+
+```bash
+agy plugin install https://github.com/beatra-ai/lyrics-to-song-skill
+```
+
 With the GitHub CLI:
 
 ```bash
@@ -97,6 +103,14 @@ Prompt:
 ```text
 Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
+
+## Inputs and outputs
+
+| | Type | Formats | Specifications |
+| --- | --- | --- | --- |
+| **Input** | Text — Complete lyrics, a rough draft, loose lines, or one hook | — | — |
+| **Output** | Text — Lyric sheet labeled by verse, chorus, and bridge, with a style prompt | — | editable |
+| **Output** | Audio — A listenable song made from your lyrics | MP3 | — |
 
 ## Technical Specifications & Output Limits
 
@@ -152,17 +166,17 @@ Facts checked on 2026-10-16. Corrections: open an issue in [beatra-ai/beatra-ski
 
 You can start with complete lyrics, a rough draft, loose lyric lines, or an existing hook. At least one existing lyric line or hook is needed to begin.
 
-### Can my original lyrics stay exactly as written?
+### What does Preserve mode do?
 
-Yes. Preserve mode keeps every lyric-body character, punctuation mark, complete line, and the exact line order unchanged. Only surrounding line breaks or blank-line spacing may be adjusted, and section labels may be added outside the lyric body.
+It builds the lyric sheet from your lyric body as written, character for character and line for line in your order. Only the line breaks and blank lines around whole lines are adjusted, and section labels go outside the lyric body.
 
-### How are pronunciation, vocal direction, and track length shaped?
+### Can I shape pronunciation, vocals, and length?
 
-Set the language, delivery, vocal character, song structure, and duration direction in the brief, then listen to the finished performance and refine the most important detail in the next version.
+Yes. Name them in the brief: the language, delivery, vocal character, song structure, and rough length all shape the song.
 
-### What happens if I change the lyrics after hearing the track?
+### What do I get?
 
-A lyric or direction change creates a new version and may also change the vocal performance and arrangement, so review the complete updated words and direction before creating it.
+A lyric sheet labeled by verse, chorus, and bridge with a style prompt, and a listenable MP3 song made from your lyrics.
 
 ## Updates and security
 
@@ -173,9 +187,10 @@ Details: `references/updates-and-security.md` inside the skill.
 
 ## License
 
-[MIT-0](LICENSE) — free to use, modify, and redistribute, including
-commercially. No attribution required. Same terms as these skills carry on
-ClawHub.
+The skill files in this repository (`SKILL.md`, references, and scripts) and this README are licensed under
+[MIT-0](LICENSE): free to use, modify, and redistribute, including commercially, with no attribution required.
+
+Media generation runs on Beatra's cloud service under the [Beatra Terms of Service](https://beatra.ai/terms?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill).
 
 ## Links
 

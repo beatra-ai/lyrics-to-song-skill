@@ -62,6 +62,12 @@ Gemini CLI 拡張機能として：
 gemini extensions install https://github.com/beatra-ai/lyrics-to-song-skill
 ```
 
+Antigravity CLI プラグインとして：
+
+```bash
+agy plugin install https://github.com/beatra-ai/lyrics-to-song-skill
+```
+
 GitHub CLI を使う場合：
 
 ```bash
@@ -96,6 +102,14 @@ https://github.com/beatra-ai/lyrics-to-song-skill から suno-lyrics-to-song ス
 Warm acoustic folk song about packing up an old apartment on moving day. Arc: quiet and wistful in the verses, opening into a warm, grateful sing-along chorus, a hushed near-whispered bridge, then a fuller final chorus that settles into a soft ending. Unhurried mid-slow tempo with a gentle swaying feel. Fingerpicked steel-string acoustic guitar, soft upright bass, brushed snare entering at the first chorus, warm upright piano, light cello swell on the choruses. Intimate close-miked male lead, plain-spoken conversational phrasing, soft harmony vocal on the final chorus. Natural room sound, analog warmth, uncluttered mix.
 ```
 
+## 入力と出力
+
+| | 種類 | 形式 | 仕様 |
+| --- | --- | --- | --- |
+| **入力** | テキスト：完成した歌詞、下書き、断片的なフレーズ、フック | — | — |
+| **出力** | テキスト：ヴァース・コーラス・ブリッジを付けた歌詞とスタイル指定 | — | 編集可能 |
+| **出力** | 音声：あなたの歌詞から作った試聴できる曲 | MP3 | — |
+
 ## 技術仕様と出力上限
 
 2026-10-18 時点。最新の一覧：https://docs.beatra.ai/ja/docs/models
@@ -127,17 +141,17 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 完成した歌詞、書きかけの草稿、断片的な歌詞行、既存のフックから始められます。始めるには、既存の歌詞行またはフックが少なくとも一つ必要です。
 
-### 元の歌詞を一字も変えずに使えますか？
+### 保持モードでは歌詞をどう扱いますか？
 
-はい。保持モードでは歌詞本文のすべての文字、句読点、完全な歌詞行、その並び順を変更しません。各行の周囲の改行や空行だけを調整し、本文の外にセクション名を加えられます。
+歌詞本文を書いたとおりに使い、文字、句読点、各行とその順番を原文どおりに歌詞シートにします。調整するのは行の前後の改行や空行だけで、セクション名は本文の外に付けます。
 
-### 発音、歌声の方向、曲の長さはどのように整えますか？
+### 発音、歌声、曲の長さは指定できますか？
 
-言語、歌い方、声の特徴、曲構成、長さの方向を指定し、完成した演奏を聴いて、次の版で最も重要な一点を調整します。
+はい。言語、歌い方、歌声の特徴、曲の構成、おおよその長さを伝えれば、その方向で作ります。
 
-### 試聴後に歌詞を変えるとどうなりますか？
+### 何が受け取れますか？
 
-歌詞や音楽の方向を変えると新しい版が作られ、歌唱やアレンジも変わる場合があります。更新した歌詞全文と方向を確認してから作成します。
+ヴァース・コーラス・ブリッジを付けた歌詞とスタイル指定、そしてあなたの歌詞から作った試聴できる MP3 の曲です。
 
 ## 更新とセキュリティ
 
@@ -147,7 +161,9 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## ライセンス
 
-[MIT-0](LICENSE)：商用を含め、自由に使用・改変・再配布できます。クレジット表記は不要です。ClawHub 上のこれらのスキルと同じ条件です。
+このリポジトリのスキルファイル（`SKILL.md`、リファレンス、スクリプト）とこの README は [MIT-0](LICENSE) で提供しています。商用を含め、自由に使用・改変・再配布でき、クレジット表記は不要です。
+
+生成は Beatra のクラウドサービスで行われ、[Beatra 利用規約](https://beatra.ai/terms?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill)が適用されます。
 
 ## リンク
 
