@@ -27,6 +27,8 @@
 
 このリポジトリは [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song) から自動的に公開されています。問題の報告はそちらへお願いします。
 
+このスキルは `lyrics-to-song` としても知られています（インストール名：`suno-lyrics-to-song`）。
+
 ## インストール
 
 [`skills`](https://skills.sh) CLI を使う場合：
@@ -82,6 +84,8 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 https://github.com/beatra-ai/lyrics-to-song-skill から suno-lyrics-to-song スキル（フォルダ skills/suno-lyrics-to-song）をインストールし、その SKILL.md に従って私の Beatra アカウントに接続してください。
 ```
 
+クリーン環境で動作確認済み：Antigravity CLI (2026-11-09)。
+
 ## 作例
 
 <p align="center"><img src="assets/cover.webp" width="800" alt="古いアパートから引っ越す歌「Taking the Light With Me」のカバーアート。日の差す空き部屋にテープで閉じた箱が 1 つ。Beatra AI で生成。"></p>
@@ -112,7 +116,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 技術仕様と出力上限
 
-2026-10-18 時点。最新の一覧：https://docs.beatra.ai/ja/docs/models
+2026-11-14 時点。最新の一覧：https://docs.beatra.ai/ja/docs/models
 
 - **アップロード** — 1 ファイルあたり最大 100 MB。下記の各モデルの入力制限も適用されます
 - **テキストから音楽** — 2 モデル（Suno 6、MiniMax Music 3.0）／MP3
@@ -167,6 +171,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## リンク
 
+- スキルページ — https://beatra.ai/skills/suno-lyrics-to-song?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - ウェブサイト — https://beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - ドキュメント — https://docs.beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - コンソール — https://console.beatra.ai

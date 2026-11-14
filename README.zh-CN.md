@@ -27,6 +27,8 @@
 
 本仓库由 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/suno-lyrics-to-song) 自动发布，问题请到那里反馈。
 
+该 Skill 也常被称为 `lyrics-to-song`（安装名为 `suno-lyrics-to-song`）。
+
 ## 安装
 
 使用 [`skills`](https://skills.sh) CLI：
@@ -82,6 +84,8 @@ gh skill install beatra-ai/lyrics-to-song-skill suno-lyrics-to-song
 从 https://github.com/beatra-ai/lyrics-to-song-skill 安装 suno-lyrics-to-song skill（目录 skills/suno-lyrics-to-song），然后按它的 SKILL.md 连接我的 Beatra 账号。
 ```
 
+干净环境实测通过：Antigravity CLI (2026-11-09)。
+
 ## 效果示例
 
 <p align="center"><img src="assets/cover.webp" width="800" alt="歌曲《Taking the Light With Me》的封面：阳光洒进搬空的房间，地板上放着一只封好的纸箱。由 Beatra AI 生成。"></p>
@@ -112,7 +116,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 技术规格与输出限制
 
-截至 2026-10-18。实时列表：https://docs.beatra.ai/zh/docs/models
+截至 2026-11-14。实时列表：https://docs.beatra.ai/zh/docs/models
 
 - **上传** — 单个文件最大 100 MB；同时适用下方各模型的输入限制
 - **文生音乐** — 2 个模型（Suno 6、MiniMax Music 3.0）；MP3
@@ -124,7 +128,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 为什么用 Beatra，而不是直接调用模型 API
 
-- **一个账号用到本 skill 的全部模型** — 文生音乐 2；参考音频生音乐 2（Suno 6、MiniMax Music 3.0）（截至 2026-10-18），一次 Beatra 登录即可使用，不必分别管理各家模型的 key。
+- **一个账号用到本 skill 的全部模型** — 文生音乐 2；参考音频生音乐 2（Suno 6、MiniMax Music 3.0）（截至 2026-11-14），一次 Beatra 登录即可使用，不必分别管理各家模型的 key。
 - **花不花钱由你决定** — 只有你明确要求这次生成，或批准显示实时积分估算的确认卡后才会付费。
 - **先策划，再生成** — skill 先帮你规划、指导和检查，再在 Beatra 上生成。
 - **文件可以核验** — `skills/` 下的每个文件都与 cdn.beatra.ai 上的发布归档逐字节一致，每次推送前用 SHA-256 校验。
@@ -190,6 +194,7 @@ Warm acoustic folk song about packing up an old apartment on moving day. Arc: qu
 
 ## 相关链接
 
+- Skill 详情页 — https://www.beatra.cn/skills/suno-lyrics-to-song?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - 官网 — https://www.beatra.cn?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - 文档 — https://docs.beatra.cn?utm_source=github&utm_medium=flagship&utm_campaign=lyrics-to-song-skill
 - 控制台 — https://console.beatra.cn
